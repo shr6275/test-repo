@@ -1,0 +1,198 @@
+h1 {
+    color : red;
+}
+.div_class {
+    color: rgb(219, 130, 28);
+    border: 5px dashed rgb(40, 235, 225);
+    padding: 30px;
+    margin: 5px;
+}
+#h3_id {
+    color:rgb(226, 230, 22);
+}   
+a {
+    text-decoration-line: none;
+    text-align: center;
+    color:yellow;
+}
+nav {
+    /*position:fixed;*/
+    background: rgb(156, 175, 209);
+   
+}
+nav ul{
+    list-style: none;
+}
+nav li{
+    display : inline-block;
+    padding: 10px;
+}
+img {
+    border-radius: 50%;
+    box-shadow: 10px 10px 5px 4px rgb(82, 108, 110);
+    margin: 20px;
+
+}
+.box{
+    
+    height: 200px;
+    width: 200px;
+    background: greenyellow;
+    margin: 10px 10px;
+    box-shadow: 10px 10px rgb(219, 233, 199);
+}
+
+@keyframes fadeMe{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+#box1 {
+    animation-name: fadeMe;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes rotation {
+    0%{
+        transform: rotate(0deg);
+    }
+   
+    100%{
+        transform: rotate(360deg);
+    }
+}
+#box2 {
+    animation-name: rotation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-out;
+    border-radius: 20%;
+    background-image: radial-gradient(circle ,purple,orange,yellow,magenta);
+}
+@keyframes getBigger{
+    0%{transform: scale(1);}
+    50%{transform: scale(2);}
+
+    100%{transform: scale(0.5);}
+}
+#box3 {
+    animation: getBigger 5s infinite ease-out;
+    border-radius: 50%;
+    background-color: coral;
+}
+@keyframes colorChange{
+    0%{background-color: grey;}
+    50%{background-color: red;}
+    100%{background-color: blue;}
+}
+#box4{
+    animation: colorChange 4s 2;
+}
+@keyframes moveBox{
+    0%{left: 0px;top:0px}
+    25%{left: 100px;top:0px}
+    50%{left:100px ;top :100px}
+    75%{left:0px ;top :100px}
+    100%{left:0px ;top :0px}
+
+}
+#box5{
+    position:relative;
+    animation: moveBox 5s infinite ease;
+}
+.contact-form {
+    display: flex;
+ justify-content: center;
+}
+.row{
+    margin: 30px;
+}
+.input-field {
+   // background-color: coral;
+    margin: 20px;
+}
+
+
+form input,textarea,button{
+   
+    display: block;
+    margin: 30px;
+}
+
+html{
+  /*  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRDgB8K1i4Q6dTXux5kAnQ98YNYp6b_i9Ombg&usqp=CAU");
+    background-repeat: no-repeat;
+background-size: cover;*/
+background-image: linear-gradient(to right, GREY,rgb(153, 48, 22));
+}
+
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    border: 3px dotted aquamarine;
+    justify-content: center;
+    padding:100px
+}
+
+
+body {
+    margin: 40px;
+  }
+  
+  .wrapper {
+          display: grid;
+      grid-gap: 10px;
+          grid-template-columns: repeat(5, [col] 20% ) ;
+          grid-template-rows: repeat(3, [row] auto  );
+          background-color: #fff;
+          color: #444;
+      }
+  
+      .Box {
+          background-color: #444;
+          color: #fff;
+          border-radius: 5px;
+          padding: 20px;
+          font-size: 150%;
+          z-index:10;
+          display: flex;
+          justify-content: center;
+  
+      }
+  
+      .a {
+          grid-column: col / span  2;
+          grid-row: row ;
+       
+      }
+      .b {
+          grid-column: col 4 / span  2 ;
+          grid-row: row ;
+      }
+      .c {
+          grid-column: col /span 5 ;
+          grid-row: row 2 ;
+      }
+      .d {
+          grid-column: col / span  3 ;
+          grid-row: row 3 ;
+          z-index: 30;
+      }
+  
+      .e {
+          grid-column: col 3 / span  3;
+          grid-row: row 3;
+          z-index: 20;
+      }
+  
+      .f {
+          grid-column: col 2 / span 3;
+          grid-row: row 2  ;
+          background-color: rgba(49,121,207, 0.5);
+          z-index: 20;
+      }
